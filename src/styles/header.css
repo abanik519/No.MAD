@@ -1,8 +1,7 @@
 #totalHeader {
     height: 130vh;
     width: 100%;
-    background-color: lightblue;
-    
+    background-color: lightblue;   
 }
 
 #headerDunes {
@@ -10,7 +9,7 @@
     width: 100vw;
     left: 0;
     right: 0;
-    bottom: -30vh;
+    bottom: -150px;
 }
 
 #logo {
@@ -22,20 +21,25 @@
     right: 0;
 }
 
-.sun {
+#sun {
     position: absolute;
     margin-top: 87px;
     margin-left: -114px;
     width: 50px;
     transition: all 1s ease-in-out;
 }
-.sun:hover {
+#sun:hover {
     transform: scale(1.5);
     margin-top: 77px;
 }
 
-.searchBox{
+#searchBox{
     display: flex;
+    width: 500px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
     justify-content: center;
     transform: translateY(300px);
 }
