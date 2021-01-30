@@ -1,0 +1,13 @@
+.searchBox{
+    width: 400px;
+    height: 40px;
+    border-radius: 20vw;
+    background-color: white;
+    padding: 20px;
+    box-shadow: none;
+    font-size: 30px;    
+}
+
+.searchBox:focus{
+    outline: none;
+}
