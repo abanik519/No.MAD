@@ -12,7 +12,7 @@ const SearchBar = ({keyword,setKeyword}) => {
         placeholder={"Search..."}
         onChange={(e) => setKeyword(e.target.value)}
         />
-        <img src={searchImage}></img>
+        <img src={searchImage} alt="magnifying glass"></img>
     </div>
   );
 }
