@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { Component } from "react";
 import searchImage from '../assets/magnifying.png';
 import Select, { components } from "react-select";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import shoeList from '../assets/shoeNames.json';
 
+const brandList = ["Jordan 1 Retro...", "Yeezy Boost 350...", "Gucci..."]
+var str = "";
+var count1 = 0;
+var count2 = 0;
 
 const customStyles = {
     control: (base, state) => ({
@@ -18,7 +22,6 @@ const customStyles = {
       width: 500,
       padding: 5,
       paddingLeft: 30,
-      borderBottom: 'solid 1px',
     }),
   
     option: (styles, { isFocused }) => {
@@ -62,19 +65,55 @@ const searchList = shoeList.map(
 );
 
 
-const SearchBar = () => {
 
-  return (
-    <Select options={searchList}
-    styles={customStyles}
-    placeholder= "Search..."
-    openMenuOnClick={false}
+export class SearchBar extends Component {
+    state = {
+        place: "",
+    }
+
+
+    componentDidMount() {
+        this.interval = setInterval(() => {
+            for(var i = count1; i<3; i++){
+                var tmp = brandList[i];
+                for(var j = count2; j < tmp.length; j++){
+                    str = str.replace("|", "");
+                    str += tmp.charAt(j) + "|";
+                    this.setState({place: str});
+                    console.log(str);
+                    count2++;
+                    return;
+                }
+                str = "";
+                this.setState({place: ""});
+                count2 = 0;
+                count1++;
+                if(i == 2){
+                    count1 = 0;
+                    return;
+                }
+            } 
+        }, 200);
+    }
     
-    classNamePrefix= "select"
-    styles={customStyles}
+    componentWillUnmount() {
+    clearInterval(this.interval);
+    }
 
-    />
-  );
+    render(){
+        return (
+        <Select
+        id="SearchBox"
+        options={searchList}
+        styles={customStyles}
+        placeholder= {this.state.place}
+        openMenuOnClick={false}
+        classNamePrefix= "select"
+        styles={customStyles}
+
+        />
+        );
+    }
 }
 
 export default SearchBar
