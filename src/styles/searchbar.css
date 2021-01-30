@@ -1,11 +1,11 @@
 .searchBox{
     width: 400px;
-    height: 40px;
+    height: 10px;
     border-radius: 20vw;
     background-color: white;
     padding: 20px;
     box-shadow: none;
-    font-size: 30px;    
+    font-size: 30px;   
 }
 
 .searchBox:focus{
