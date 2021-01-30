@@ -1,5 +1,5 @@
 #totalHeader {
-    height: 130vh;
+    height: 120vh;
     width: 100%;
     background-color: lightblue;
     
@@ -10,13 +10,13 @@
     width: 100vw;
     left: 0;
     right: 0;
-    bottom: -30vh;
+    bottom: -150px;
 }
 
 #logo {
     width: 400px;
     position: absolute;
-    top: 80px;
+    top: 40px;
     margin: auto;
     left: 0;
     right: 0;
@@ -24,12 +24,18 @@
 
 .sun {
     position: absolute;
-    margin-top: 127px;
+    margin-top: 87px;
     margin-left: -114px;
     width: 50px;
     transition: all 1s ease-in-out;
 }
 .sun:hover {
     transform: scale(1.5);
-    margin-top: 117px;
+    margin-top: 77px;
+}
+
+.searchBox{
+    display: flex;
+    justify-content: center;
+    transform: translateY(300px);
 }

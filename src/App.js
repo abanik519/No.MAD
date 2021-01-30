@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import './styles/App.css';
 import './styles/header.css';
-import './styles/searchbar.css';
 import './styles/featured.css';
 
 
