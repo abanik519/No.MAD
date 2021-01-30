@@ -1,15 +1,16 @@
 #totalHeader {
-    height: 100vh;
+    height: 130vh;
     width: 100%;
     background-color: lightblue;
+    
 }
 
 #headerDunes {
     position: absolute;
+    width: 100vw;
     left: 0;
     right: 0;
-    width: 100vw;
-    top: 30vw;
+    bottom: -30vh;
 }
 
 #logo {
