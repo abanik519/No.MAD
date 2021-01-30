@@ -70,6 +70,7 @@ export class SearchBar extends Component {
     }
 
 
+
     componentDidMount() {
         this.interval = setInterval(() => {
             for(var i = count1; i<3; i++){
