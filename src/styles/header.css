@@ -1,6 +1,6 @@
 #totalHeader {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-color: lightblue;
 }
 
@@ -22,12 +22,13 @@
 }
 
 .sun {
-    margin-top: 120px;
-    margin-right: 185px;
+    position: absolute;
+    margin-top: 127px;
+    margin-left: -114px;
     width: 50px;
     transition: all 1s ease-in-out;
 }
 .sun:hover {
     transform: scale(1.5);
-    margin-top: 108px;
+    margin-top: 117px;
 }
