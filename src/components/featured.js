@@ -21,7 +21,7 @@ export class Featured extends Component {
           document.getElementById("sneakers") &&
           document.getElementById("onSneaker")
           ){
-            document.getElementById("onSneaker").style.display = "block"
+            document.getElementById("onSneaker").style.display = "block";
             document.getElementById("onStreetwear").style.display = "none";
             document.getElementById("onWatches").style.display = "none";
             document.getElementById("onHandbags").style.display = "none";
@@ -165,7 +165,7 @@ export class Featured extends Component {
                 <div id="sneakerBox" >
                     <div id="innerSneakerBox">
                         <p className="smallT">FEATURED SNEAKERS</p>
-                        <div id="cardBox">
+                        <div className="cardBox">
                             <div className="card">
                                 <div className="placeHolderImg"></div>
                                 <div className="placeHolderInfo">
@@ -202,7 +202,7 @@ export class Featured extends Component {
                                 <div className="placeHolderNo"></div>
                             </div>
                         </div>
-                        <div id="cardBox">
+                        <div className="cardBox">
                             <div className="card">
                                 <div className="placeHolderImg"></div>
                                 <div className="placeHolderInfo">

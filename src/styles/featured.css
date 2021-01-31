@@ -107,7 +107,7 @@
     display: block;
     width: 100%;
 }
-#cardBox {
+.cardBox {
     display: flex;
     flex-direction: row;
 }
