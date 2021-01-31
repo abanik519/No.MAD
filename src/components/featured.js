@@ -218,28 +218,26 @@ alt="placeholders"></img>
 )}
 </div>
 <div className="cardBox">
-{featured_box2.map(shoe =>
-<div className="card">
-<div className="placeHolderImg">
-<img src={shoe.thumbnailImgage} className="cardImg"
-alt="placeholders"></img>
-</div>
-<div className="placeHolderInfo">
-<p className="tinyT">{shoe.name}</p>
-</div>
-<div className="placeHolderNo">
-<img src={nometer} className="noImg" alt="nometer gauge"></img>
-<div className="noFeature">
-<div className="singleFeaturePrice"></div>
-<div className="singleFeaturePop"></div>
-<div className="singleFeatureNeural"></div>
-</div>
-
-</div>
-</div>
-)}
-</div>
-</div>
+                            {featured_box2.map(shoe => 
+                            <div className="card">
+                                <div className="placeHolderImg">
+                                    <img src={shoe.thumbnailImgage} className="cardImg" alt="placeholders"></img>
+                                </div>
+                                <div className="placeHolderInfo">
+                                    <p className="tinyT">{shoe.name}</p>
+                                </div>
+                                <div className="placeHolderNo">
+                                    <img src={nometer} className="noImg" alt="nometer gauge"></img>
+                                    <div className="noFeature">
+                                        <div className="singleFeaturePrice"></div>
+                                        <div className="singleFeaturePop"></div>
+                                        <div className="singleFeatureNeural"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            )} 
+                        </div>
+                    </div>
                 </div>
                 <div id="searchSneakerBox">
                     <div className="searchTitle">{this.state.searchShoe.name}</div>
