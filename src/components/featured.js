@@ -218,7 +218,7 @@ export class Featured extends Component {
                                     </div>
                                 </div>
                             </div>
-                            )}
+                            )} 
                         </div>
                     </div>
                 </div>
