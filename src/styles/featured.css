@@ -1,5 +1,5 @@
 #totalFeatured {
-    height: 100vh;
+    background-color: white;
 }
 
 #navList {
@@ -20,12 +20,12 @@
     transition: all 0.5s ease-out;
 }
 .navItem:hover {
-    background-color: rgb(235, 235, 235);
+    background-color: rgba(143, 143, 143, 0.3);
 }
 
 .navText {
     font-size: 30px;
-    color:#C5A500;
+    color:#D3CB00;
     font-weight: bolder;
 }
 
@@ -45,26 +45,84 @@
     display: flex;
 }
 #streetwearBox {
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: auto;
     display: none;
 }
 #watchBox {
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: auto;
     display: none;
 }
 #handBox {
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: auto;
     display: none;
 }
 #jewelleryBox {
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: auto;
     display: none;
+}
+
+#oasis {
+    width: 1200px;
+    height: 770px;
+    transform: translateY(-0px);
+}
+
+.boxText {
+    margin-left: 100px;
+    transform: translateY(-500px);
+}
+.smallT {
+    z-index: 2;
+    text-align: left;
+    font-weight: bolder;
+    color: #918C00;
+    font-size: 60px;
+}
+.bigT {
+    z-index: 2;
+    text-align: left;
+    font-weight: bolder;
+    color: #918C00;
+    font-size: 100px;
+}
+
+.errorText{
+    position: absolute;
+    margin-left: 80px;
+    text-align: left;
+    font-weight: bolder;
+    color: #918C00;
+    font-size: 60px;
+}
+
+#innerSneakerBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.featuredShoe {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.placeHolderImg {
+    height: 200px;
+    width: 200px;
+    background-color:rgb(243, 243, 243);
+    border-radius: 25px;
+}
+.placeHolderTxt {
+    width: 60%;
+    height: 200px;
+    display: flex;
+    background-color: rgb(243, 243, 243);
+    border-radius: 25px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.placeHolderNo {
+    height: 200px;
+    width: 200px;
+    background-color:rgb(243, 243, 243);
+    border-radius: 25px;
 }

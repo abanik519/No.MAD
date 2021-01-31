@@ -5,11 +5,11 @@ import './styles/header.css';
 import './styles/featured.css';
 import './styles/sneakerPage.css';
 
-
 import Header from './components/header';
 import Featured from './components/featured';
 
 export class App extends Component {
+  
   render() {
     return (
       <div className="App">
@@ -21,3 +21,4 @@ export class App extends Component {
 }
 
 export default App;
+//#121212
