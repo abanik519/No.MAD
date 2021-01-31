@@ -9,12 +9,21 @@ import Header from './components/header';
 import Featured from './components/featured';
 
 export class App extends Component {
-  
+  state = {
+    totalInfo: null,
+  }
+
+  componentDidMount() {
+    // Simple GET request using fetch
+    fetch('http://localhost:9000/algo')
+        .then(response => response.json())
+        .then(data => this.setState({ totalInfo: data }));
+  }
   render() {
     return (
       <div className="App">
-        <Header />
-        <Featured />
+        <Header data={this.state.totalInfo} />
+        <Featured data={this.state.totalInfo} />
       </div>
     );
   }

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 //import searchImage from '../assets/magnifying.png';
 import Select from "react-select";
 import shoeList from '../assets/shoeNames.json';
+import '../styles/featured.css';
 import SneakerPage from './sneakerPage';
 import {
   BrowserRouter as Router,
@@ -115,14 +116,18 @@ export class SearchBar extends Component {
         console.log(selectedOption);
        }
 
+    scrollTo = () => {
+      var element_to_scroll_to = document.getElementById('innerSneakerBox');
+      element_to_scroll_to.scrollIntoView();
+    }
+
     render(){
-        if(this.state.selectedOption == null){
           return (
             <Select
             id="SearchBox"
             value={this.state.selectedOption}
             options={searchList}
-            onChange={this.handleChange}
+            onChange={this.scrollTo}
             styles={customStyles}
             placeholder= {this.state.place}
             openMenuOnClick={false}
@@ -131,14 +136,6 @@ export class SearchBar extends Component {
             autoFocus={true}
             />
             );
-        }
-        else{
-          return(
-            <Router>
-                <Route path="/page/" component={SneakerPage} />
-            </Router>
-          );
-        }
     }
 }
 
