@@ -45,27 +45,19 @@
     display: flex;
 }
 #streetwearBox {
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: auto;
     display: none;
 }
 #watchBox {
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: auto;
     display: none;
 }
 #handBox {
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: auto;
     display: none;
 }
 #jewelleryBox {
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: auto;
     display: none;
 }
 
@@ -98,29 +90,11 @@
     flex-direction: column;
     width: 100%;
 }
-.featuredShoe {
+.card {
     display: flex;
     flex-direction: row;
-    width: 100%;
-}
-.placeHolderImg {
-    height: 200px;
-    width: 200px;
-    background-color:rgb(243, 243, 243);
-    border-radius: 25px;
-}
-.placeHolderTxt {
-    width: 60%;
-    height: 200px;
-    display: flex;
-    background-color: rgb(243, 243, 243);
-    border-radius: 25px;
-    margin-left: 30px;
-    margin-right: 30px;
-}
-.placeHolderNo {
-    height: 200px;
-    width: 200px;
-    background-color:rgb(243, 243, 243);
+    height: 400px;
+    width: 250px;
+    border: solid #ececec thin;
     border-radius: 25px;
 }

@@ -165,10 +165,8 @@ export class Featured extends Component {
                 <div id="sneakerBox" >
                     <div id="innerSneakerBox">
                         <p className="smallT">FEATURED SNEAKERS</p>
-                        <div className="featuredShoe">
-                            <div className="placeHolderImg"></div>
-                            <div className="placeHolderTxt"></div>
-                            <div className="placeHolderNo"></div>
+                        <div className="card">
+                           
                         </div>
                     </div>
                 </div>
