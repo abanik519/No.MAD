@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import oasis from '../assets/oasis.png';
+
 export class Featured extends Component {
     state = {
         isSneaker: true,
@@ -26,7 +28,7 @@ export class Featured extends Component {
             document.getElementById("onJewellery").style.display = "none";
           }
           
-        document.getElementById("sneakerBox").style.display = "flex";
+        document.getElementById("sneakerBox").style.display = "block";
         document.getElementById("streetwearBox").style.display = "none";
         document.getElementById("watchBox").style.display = "none";
         document.getElementById("handBox").style.display = "none";
@@ -51,7 +53,7 @@ export class Featured extends Component {
           }
         
           document.getElementById("sneakerBox").style.display = "none";
-          document.getElementById("streetwearBox").style.display = "flex";
+          document.getElementById("streetwearBox").style.display = "block";
           document.getElementById("watchBox").style.display = "none";
           document.getElementById("handBox").style.display = "none";
           document.getElementById("jewelleryBox").style.display = "none";
@@ -76,7 +78,7 @@ export class Featured extends Component {
 
           document.getElementById("sneakerBox").style.display = "none";
           document.getElementById("streetwearBox").style.display = "none";
-          document.getElementById("watchBox").style.display = "flex";
+          document.getElementById("watchBox").style.display = "block";
           document.getElementById("handBox").style.display = "none";
           document.getElementById("jewelleryBox").style.display = "none";
     }
@@ -101,7 +103,7 @@ export class Featured extends Component {
           document.getElementById("sneakerBox").style.display = "none";
           document.getElementById("streetwearBox").style.display = "none";
           document.getElementById("watchBox").style.display = "none";
-          document.getElementById("handBox").style.display = "flex";
+          document.getElementById("handBox").style.display = "block";
           document.getElementById("jewelleryBox").style.display = "none";
     }
 
@@ -126,7 +128,7 @@ export class Featured extends Component {
           document.getElementById("streetwearBox").style.display = "none";
           document.getElementById("watchBox").style.display = "none";
           document.getElementById("handBox").style.display = "none";
-          document.getElementById("jewelleryBox").style.display = "flex";
+          document.getElementById("jewelleryBox").style.display = "block";
     }
 
     render() {
@@ -164,16 +166,32 @@ export class Featured extends Component {
                     Sneakers
                 </div>
                 <div id="streetwearBox">
-                    Streetwear
+                    <img src={oasis} id="oasis" alt="coming soon oasis" />
+                    <div>
+                        <p className="boxText smallT">Streetwear coming soon to</p>
+                        <p className="boxText bigT">No.MAD</p>
+                    </div>
                 </div>
                 <div id="watchBox">
-                    Watches
+                    <img src={oasis} id="oasis" alt="coming soon oasis" />
+                    <div>
+                        <p className="boxText smallT">Watches coming soon to</p>
+                        <p className="boxText bigT">No.MAD</p>
+                    </div>
                 </div>
                 <div id="handBox">
-                    Handbags
+                    <img src={oasis} id="oasis" alt="coming soon oasis" />
+                    <div>
+                        <p className="boxText smallT">Handbags coming soon to</p>
+                        <p className="boxText bigT">No.MAD</p>
+                    </div>
                 </div>
                 <div id="jewelleryBox">
-                    Jewellery
+                    <img src={oasis} id="oasis" alt="coming soon oasis" />
+                    <div>
+                        <p className="boxText smallT">Jewellery coming soon to</p>
+                        <p className="boxText bigT">No.MAD</p>
+                    </div>
                 </div>
             </div>
         );

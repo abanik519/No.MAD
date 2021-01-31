@@ -25,7 +25,7 @@
 
 .navText {
     font-size: 30px;
-    color:#C5A500;
+    color:#D3CB00;
     font-weight: bolder;
 }
 
@@ -67,4 +67,24 @@
     margin-left: 5%;
     margin-right: 5%;
     display: none;
+}
+
+#oasis {
+    width: 1200px;
+    height: 770px;
+}
+
+.boxText {
+    margin-left: 100px;
+    transform: translateY(-500px);
+    z-index: 2;
+    text-align: left;
+    font-weight: bolder;
+    color: #918C00;
+}
+.smallT {
+    font-size: 60px;
+}
+.bigT {
+    font-size: 100px;
 }
