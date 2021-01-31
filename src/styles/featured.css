@@ -64,10 +64,11 @@
 #oasis {
     width: 1200px;
     height: 770px;
+    transform: translateY(-0px);
 }
 
 .boxText {
-    margin-left: 100px;
+    margin-left: 140px;
     transform: translateY(-500px);
 }
 .smallT {
@@ -84,6 +85,23 @@
     color: #918C00;
     font-size: 100px;
 }
+.tinyT {
+    z-index: 2;
+    text-align: left;
+    font-weight: bolder;
+    color: #918C00;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.errorText{
+    position: absolute;
+    margin-left: 140px;
+    text-align: left;
+    font-weight: bolder;
+    color: #918C00;
+    font-size: 60px;
+}
 
 #innerSneakerBox {
     display: flex;
@@ -92,9 +110,25 @@
 }
 .card {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 400px;
     width: 250px;
     border: solid #ececec thin;
     border-radius: 25px;
+}
+.placeHolderImg {
+    height: 33%;
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+    background-color: #ececec;
+}
+.placeHolderInfo {
+    height: 34%;
+    width: 100%;
+}
+.placeHolderNo {
+    height: 33%;
+    width: 100%;
+    border-radius: 0 0 25px 25px;
+    background-color: #ececec;
 }

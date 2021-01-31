@@ -166,11 +166,16 @@ export class Featured extends Component {
                     <div id="innerSneakerBox">
                         <p className="smallT">FEATURED SNEAKERS</p>
                         <div className="card">
-                           
+                            <div className="placeHolderImg"></div>
+                            <div className="placeHolderInfo">
+                                <p className="tinyT">Yeezy</p>
+                            </div>
+                            <div className="placeHolderNo"></div>
                         </div>
                     </div>
                 </div>
                 <div id="streetwearBox">
+                    <p className="errorText">WE'RE SORRY...</p>
                     <img src={oasis} id="oasis" alt="coming soon oasis" />
                     <div>
                         <p className="boxText smallT">Streetwear coming soon to</p>
@@ -178,6 +183,7 @@ export class Featured extends Component {
                     </div>
                 </div>
                 <div id="watchBox">
+                    <p className="errorText">WE'RE SORRY...</p>
                     <img src={oasis} id="oasis" alt="coming soon oasis" />
                     <div>
                         <p className="boxText smallT">Watches coming soon to</p>
@@ -185,6 +191,7 @@ export class Featured extends Component {
                     </div>
                 </div>
                 <div id="handBox">
+                    <p className="errorText">WE'RE SORRY...</p>
                     <img src={oasis} id="oasis" alt="coming soon oasis" />
                     <div>
                         <p className="boxText smallT">Handbags coming soon to</p>
@@ -192,6 +199,7 @@ export class Featured extends Component {
                     </div>
                 </div>
                 <div id="jewelleryBox">
+                    <p className="errorText">WE'RE SORRY...</p>
                     <img src={oasis} id="oasis" alt="coming soon oasis" />
                     <div>
                         <p className="boxText smallT">Jewellery coming soon to</p>

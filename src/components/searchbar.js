@@ -3,8 +3,12 @@ import React, { Component } from "react";
 import Select from "react-select";
 import shoeList from '../assets/shoeNames.json';
 import SneakerPage from './sneakerPage';
-import { Route, IndexRoute, Router } from 'react-router';
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 const brandList = ["Jordan 1 Retro...", "Yeezy Boost 350...", "Gucci..."]
 var str = "";
@@ -14,7 +18,7 @@ var count2 = 0;
 const customStyles = {
     control: (base, state) => ({
       ...base,
-      fontFamily: 'Times New Roman',
+      fontFamily: 'Arial',
       fontSize: 18,
       border: state.isFocused ? 0 : 0,
       boxShadow: state.isFocused ? 0 : 0,
@@ -29,30 +33,35 @@ const customStyles = {
       return {
         ...styles,
         cursor: 'pointer',
-        backgroundColor: isFocused ? 'rgba(100, 86, 35)' : 'white',
+        backgroundColor: isFocused ? 'rgba(143, 143, 143, 0.3)' : 'white',
         color: isFocused ? 'rgba(200, 86, 35)' : 'black',
         lineHeight: 2,
+        width: 470,
+        marginLeft: 15,
+        borderRadius: 10,
       }
     },
   
     input: styles => ({
       ...styles,
       color: 'black',
-      fontFamily: 'Times New Roman, Times, Serif',
+      fontFamily: 'Arial',
     }),
   
     menu: styles => ({
       ...styles,
-      marginTop: 0,
       boxShadow: 'none',
-      width: 450,
-      marginLeft: 25,
-      borderRadius: 0,
+      width: 500,
+      marginTop: 10,
+      paddingTop: 10,
+      paddingBottom: 10,
+      borderRadius: 20,
     }),
   
     singleValue: styles => ({
       ...styles,
       color: 'rgba(100, 86, 35)',
+      width: 400,
     }),
   }
 
@@ -108,7 +117,7 @@ export class SearchBar extends Component {
 
     render(){
         if(this.state.selectedOption == null){
-            return (
+          return (
             <Select
             id="SearchBox"
             value={this.state.selectedOption}
@@ -124,11 +133,11 @@ export class SearchBar extends Component {
             );
         }
         else{
-            return(
-                <Router>
-                    <Route path="/page/" component={SneakerPage} />
-                </Router>
-            );
+          return(
+            <Router>
+                <Route path="/page/" component={SneakerPage} />
+            </Router>
+          );
         }
     }
 }
