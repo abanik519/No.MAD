@@ -5,9 +5,9 @@ import shoeList from '../assets/shoeNames.json';
 import SneakerPage from './sneakerPage';
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+  //Switch,
+  Route//,
+  //Link
 } from "react-router-dom";
 
 const brandList = ["Jordan 1 Retro...", "Yeezy Boost 350...", "Gucci..."]
@@ -34,6 +34,7 @@ const customStyles = {
         ...styles,
         cursor: 'pointer',
         backgroundColor: isFocused ? 'rgba(143, 143, 143, 0.3)' : 'white',
+        transition: isFocused ? 'all 0.1s ease-in-out' : 'all 0.4s ease-in-out',
         color: isFocused ? 'rgba(200, 86, 35)' : 'black',
         lineHeight: 2,
         width: 470,
@@ -127,7 +128,7 @@ export class SearchBar extends Component {
             placeholder= {this.state.place}
             openMenuOnClick={false}
             classNamePrefix= "select"
-            styles={customStyles}
+            //styles={customStyles}
             autoFocus={true}
             />
             );

@@ -42,7 +42,7 @@
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
-    display: flex;
+    display: block;
 }
 #streetwearBox {
     margin: auto;
@@ -104,11 +104,15 @@
 }
 
 #innerSneakerBox {
-    display: flex;
-    flex-direction: column;
+    display: block;
     width: 100%;
 }
+#cardBox {
+    display: flex;
+    flex-direction: row;
+}
 .card {
+    margin: 10px;
     display: flex;
     flex-direction: column;
     height: 400px;
