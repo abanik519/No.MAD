@@ -7,10 +7,7 @@ import logo from '../assets/logo.png';
 import sun from '../assets/logoSun.png';
 
 export class Header extends Component {
-    state = {
-    };
-
-    animation(){
+    animation = () => {
       window.addEventListener('click', function(e){   
         if (document.getElementById('searchBox').contains(e.target)){
           document.getElementById("searchBox").style.transform = "translateY(180px)";
@@ -31,7 +28,6 @@ export class Header extends Component {
           document.getElementById("totalFeatured").style.marginTop = "0px";
         }
       });
-      
     }
 
     hover(){
@@ -43,16 +39,6 @@ export class Header extends Component {
       document.getElementById("sun").style.transform = "scale(1)";
       document.getElementById("sun").style.marginTop = "87px"; 
     }
-
-    restart(){
-      document.getElementById("searchBox").style.transform = "translateY(300px)";
-      document.getElementById("totalHeader").style.backgroundColor = " lightblue";
-      document.getElementById("headerDunes").style.bottom = "-150px"
-    }
-
-    state = {
-      isLight: true,
-    };
 
     render() {
       return (

@@ -138,10 +138,11 @@
     margin: 10px;
     display: flex;
     flex-direction: column;
-    height: 400px;
+    height: 450px;
     width: 250px;
     border: solid #ececec thin;
     border-radius: 25px;
+    overflow:hidden;
 }
 
 .cardImg{
@@ -149,18 +150,52 @@
 }
 
 .placeHolderImg {
-    height: 33%;
+    height: 35%;
     width: 100%;
     border-radius: 25px 25px 0 0;
     background-color: #ececec;
 }
 .placeHolderInfo {
-    height: 34%;
+    height: 25%;
     width: 100%;
 }
 .placeHolderNo {
-    height: 33%;
+    height: 40%;
     width: 100%;
     border-radius: 0 0 25px 25px;
-    background-color: #ececec;
+    background-color: white;
+}
+
+.noImg {
+    width: 240px;
+}
+
+.noFeature {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 15px;
+}
+
+.singleFeaturePrice {
+    background-color: transparent;
+    border: none;
+    padding: 25px;
+    background-repeat: no-repeat;
+    background-image: url("../assets/goodPrice.svg");
+}
+.singleFeaturePop {
+    background-color: transparent;
+    border: none;
+    padding: 25px;
+    background-repeat: no-repeat;
+    background-image: url("../assets/goodPop.svg");
+}
+.singleFeatureNeural {
+    background-color: transparent;
+    border: none;
+    padding: 25px;
+    background-repeat: no-repeat;
+    background-image: url("../assets/goodNeural.svg");
 }

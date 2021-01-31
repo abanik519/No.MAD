@@ -29,6 +29,7 @@ export class Featured extends Component {
           document.getElementById("onSneaker")
           ){
             document.getElementById("onSneaker").style.display = "block"
+            document.getElementById("searchSneakerBox").style.display = "none";
             document.getElementById("onStreetwear").style.display = "none";
             document.getElementById("onWatches").style.display = "none";
             document.getElementById("onHandbags").style.display = "none";
@@ -36,6 +37,7 @@ export class Featured extends Component {
           }
           
         document.getElementById("sneakerBox").style.display = "block";
+        document.getElementById("searchSneakerBox").style.display = "none";
         document.getElementById("streetwearBox").style.display = "none";
         document.getElementById("watchBox").style.display = "none";
         document.getElementById("handBox").style.display = "none";
@@ -54,6 +56,7 @@ export class Featured extends Component {
           ){
             document.getElementById("onSneaker").style.display = "none"
             document.getElementById("onStreetwear").style.display = "block";
+            document.getElementById("searchSneakerBox").style.display = "none";
             document.getElementById("onWatches").style.display = "none";
             document.getElementById("onHandbags").style.display = "none";
             document.getElementById("onJewellery").style.display = "none";
@@ -79,6 +82,7 @@ export class Featured extends Component {
             document.getElementById("onSneaker").style.display = "none"
             document.getElementById("onStreetwear").style.display = "none";
             document.getElementById("onWatches").style.display = "block";
+            document.getElementById("searchSneakerBox").style.display = "none";
             document.getElementById("onHandbags").style.display = "none";
             document.getElementById("onJewellery").style.display = "none";
           }
@@ -103,6 +107,7 @@ export class Featured extends Component {
             document.getElementById("onSneaker").style.display = "none"
             document.getElementById("onStreetwear").style.display = "none";
             document.getElementById("onWatches").style.display = "none";
+            document.getElementById("searchSneakerBox").style.display = "none";
             document.getElementById("onHandbags").style.display = "block";
             document.getElementById("onJewellery").style.display = "none";
           }
@@ -127,6 +132,7 @@ export class Featured extends Component {
             document.getElementById("onSneaker").style.display = "none"
             document.getElementById("onStreetwear").style.display = "none";
             document.getElementById("onWatches").style.display = "none";
+            document.getElementById("searchSneakerBox").style.display = "none";
             document.getElementById("onHandbags").style.display = "none";
             document.getElementById("onJewellery").style.display = "block";
           }
@@ -219,7 +225,8 @@ export class Featured extends Component {
                 </div>
                 <div id="searchSneakerBox">
                     <div className="searchTitle">{this.state.searchShoe.name}</div>
-                    <img className="searchImage" src={this.state.searchShoe.thumbnailImgage}></img>            
+                    <img className="searchImage" src={this.state.searchShoe.thumbnailImgage}></img>    
+                            
                 </div>
 
                 <div id="streetwearBox">
