@@ -2,6 +2,11 @@ import React, { Component } from "react";
 
 import oasis from '../assets/oasis.png';
 
+import featured_box1 from '../assets/featuredShoes1.json';
+import featured_box2 from '../assets/featuredShoes2.json';
+
+
+
 export class Featured extends Component {
     state = {
         isSneaker: true,
@@ -10,6 +15,7 @@ export class Featured extends Component {
         isHandbag: false,
         isJewellery: false,
     };
+
 
     SneakerActive = () => {
         this.setState({ isSneaker: true});
@@ -165,79 +171,32 @@ export class Featured extends Component {
                 <div id="sneakerBox" >
                     <div id="innerSneakerBox">
                         <p className="smallT">FEATURED SNEAKERS</p>
-                        <div id="cardBox">
+                        <div className="cardBox">
+
+                            {featured_box1.map(shoe => 
                             <div className="card">
-                                <div className="placeHolderImg"></div>
-                                <div className="placeHolderInfo">
-                                    <p className="tinyT">Yeezy</p>
+                                <div className="placeHolderImg">
+                                    <img src={shoe.thumbnailImgage} className="cardImg"></img>
                                 </div>
-                                <div className="placeHolderNo"></div>
-                            </div>
-                            <div className="card">
-                                <div className="placeHolderImg"></div>
                                 <div className="placeHolderInfo">
-                                    <p className="tinyT">Yeezy</p>
+                                <p className="tinyT">{shoe.name}</p>
                                 </div>
-                                <div className="placeHolderNo"></div>
-                            </div>
-                            <div className="card">
-                                <div className="placeHolderImg"></div>
-                                <div className="placeHolderInfo">
-                                    <p className="tinyT">Yeezy</p>
-                                </div>
-                                <div className="placeHolderNo"></div>
-                            </div>
-                            <div className="card">
-                                <div className="placeHolderImg"></div>
-                                <div className="placeHolderInfo">
-                                    <p className="tinyT">Yeezy</p>
-                                </div>
-                                <div className="placeHolderNo"></div>
-                            </div>
-                            <div className="card">
-                                <div className="placeHolderImg"></div>
-                                <div className="placeHolderInfo">
-                                    <p className="tinyT">Yeezy</p>
-                                </div>
-                                <div className="placeHolderNo"></div>
-                            </div>
+                                <div className="placeHolderNo"></div></div>
+                            )}
                         </div>
-                        <div id="cardBox">
+
+                        <div className="cardBox">
+
+                            {featured_box2.map(shoe => 
                             <div className="card">
-                                <div className="placeHolderImg"></div>
-                                <div className="placeHolderInfo">
-                                    <p className="tinyT">Yeezy</p>
+                                <div className="placeHolderImg">
+                                <img src={shoe.thumbnailImgage} className="cardImg"></img>
                                 </div>
-                                <div className="placeHolderNo"></div>
-                            </div>
-                            <div className="card">
-                                <div className="placeHolderImg"></div>
                                 <div className="placeHolderInfo">
-                                    <p className="tinyT">Yeezy</p>
+                                <p className="tinyT">{shoe.name}</p>
                                 </div>
-                                <div className="placeHolderNo"></div>
-                            </div>
-                            <div className="card">
-                                <div className="placeHolderImg"></div>
-                                <div className="placeHolderInfo">
-                                    <p className="tinyT">Yeezy</p>
-                                </div>
-                                <div className="placeHolderNo"></div>
-                            </div>
-                            <div className="card">
-                                <div className="placeHolderImg"></div>
-                                <div className="placeHolderInfo">
-                                    <p className="tinyT">Yeezy</p>
-                                </div>
-                                <div className="placeHolderNo"></div>
-                            </div>
-                            <div className="card">
-                                <div className="placeHolderImg"></div>
-                                <div className="placeHolderInfo">
-                                    <p className="tinyT">Yeezy</p>
-                                </div>
-                                <div className="placeHolderNo"></div>
-                            </div>
+                                <div className="placeHolderNo"></div></div>
+                            )}
                         </div>
                     </div>
                 </div>

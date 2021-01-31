@@ -10,7 +10,7 @@ import Featured from './components/featured';
 
 export class App extends Component {
   state = {
-    totalInfo: null,
+    totalInfo: [],
   }
 
   componentDidMount() {
@@ -19,6 +19,7 @@ export class App extends Component {
         .then(response => response.json())
         .then(data => this.setState({ totalInfo: data }));
   }
+
   render() {
     return (
       <div className="App">
