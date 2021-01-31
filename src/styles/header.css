@@ -2,6 +2,7 @@
     height: 130vh;
     width: 100%;
     background-color: lightblue;   
+    overflow: hidden;
 }
 
 #headerDunes {
@@ -27,10 +28,6 @@
     margin-left: -114px;
     width: 50px;
     transition: all 1s ease-in-out;
-}
-#sun:hover {
-    transform: scale(1.5);
-    margin-top: 77px;
 }
 
 #searchBox{

@@ -4,6 +4,9 @@ import Select, { components } from "react-select";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import shoeList from '../assets/shoeNames.json';
+import SneakerPage from './sneakerPage';
+import { Route, IndexRoute, Router } from 'react-router';
+
 
 const brandList = ["Jordan 1 Retro...", "Yeezy Boost 350...", "Gucci..."]
 var str = "";
@@ -24,7 +27,7 @@ const customStyles = {
       paddingLeft: 30,
     }),
   
-    option: (styles, { isFocused }) => {
+    option: (styles, { isFocused }, onClick) => {
       return {
         ...styles,
         cursor: 'pointer',
@@ -69,6 +72,7 @@ const searchList = shoeList.map(
 export class SearchBar extends Component {
     state = {
         place: "",
+        selectedOption: null,
     }
 
 
@@ -81,7 +85,6 @@ export class SearchBar extends Component {
                     str = str.replace("|", "");
                     str += tmp.charAt(j) + "|";
                     this.setState({place: str});
-                    console.log(str);
                     count2++;
                     return;
                 }
@@ -101,18 +104,36 @@ export class SearchBar extends Component {
     clearInterval(this.interval);
     }
 
+
+    handleChange = selectedOption => {
+        this.setState({ selectedOption });
+        console.log(selectedOption);
+       }
+
     render(){
-        return (
-        <Select
-        id="SearchBox"
-        options={searchList}
-        styles={customStyles}
-        placeholder= {this.state.place}
-        openMenuOnClick={false}
-        classNamePrefix= "select"
-        styles={customStyles}
-        />
-        );
+        if(this.state.selectedOption == null){
+            return (
+            <Select
+            id="SearchBox"
+            value={this.state.selectedOption}
+            options={searchList}
+            onChange={this.handleChange}
+            styles={customStyles}
+            placeholder= {this.state.place}
+            openMenuOnClick={false}
+            classNamePrefix= "select"
+            styles={customStyles}
+            autoFocus={true}
+            />
+            );
+        }
+        else{
+            return(
+                <Router>
+                    <Route path="/page/" component={SneakerPage} />
+                </Router>
+            );
+        }
     }
 }
 

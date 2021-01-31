@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './styles/App.css';
 import './styles/header.css';
 import './styles/featured.css';
+import './styles/sneakerPage.css';
 
 
 import Header from './components/header';
