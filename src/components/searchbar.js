@@ -33,9 +33,11 @@ const customStyles = {
       return {
         ...styles,
         cursor: 'pointer',
-        backgroundColor: isFocused ? 'rgba(100, 86, 35)' : 'white',
+        backgroundColor: isFocused ? 'rgba(143, 143, 143, 0.3)' : 'white',
         color: isFocused ? 'rgba(200, 86, 35)' : 'black',
         lineHeight: 2,
+        width: 400,
+        marginLeft: 25,
       }
     },
   
@@ -51,12 +53,13 @@ const customStyles = {
       boxShadow: 'none',
       width: 450,
       marginLeft: 25,
-      borderRadius: 0,
+      borderRadius: 20,
     }),
   
     singleValue: styles => ({
       ...styles,
       color: 'rgba(100, 86, 35)',
+      width: 400,
     }),
   }
 
