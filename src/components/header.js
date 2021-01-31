@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SearchBar from './searchbar';
+import SneakerPage from './sneakerPage';
 
 import dunes from '../assets/dunes2.png';
 import logo from '../assets/logo.png';
@@ -31,6 +32,16 @@ export class Header extends Component {
       
     }
 
+    hover(){
+      document.getElementById("sun").style.transform = "scale(1.5)";
+      document.getElementById("sun").style.marginTop = "77px";
+    }
+
+    notHover(){
+      document.getElementById("sun").style.transform = "scale(1)";
+      document.getElementById("sun").style.marginTop = "87px";
+    }
+
     restart(){
       document.getElementById("searchBox").style.transform = "translateY(300px)";
       document.getElementById("totalHeader").style.backgroundColor = " lightblue";
@@ -41,7 +52,7 @@ export class Header extends Component {
       return (
           <div id="totalHeader" onClick={this.animation}>
               <img src={logo} id="logo" alt="main logo"/>
-              <img src={sun} id="sun" alt="sun inside main logo"/>
+              <img src={sun} id="sun" alt="sun inside main logo" onMouseEnter={this.hover} onMouseLeave={this.notHover} />
               <img src={dunes} id="headerDunes" alt="rolling dunes"/>
               <div id="searchBox" onClick={this.animation} onCli>
                 <SearchBar/>
@@ -50,5 +61,5 @@ export class Header extends Component {
       );
     }
 }
-//                <img src={sun} id="sun" alt="sun inside main logo"/>
+
 export default Header;
