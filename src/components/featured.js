@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 
 import oasis from '../assets/oasis.png';
+import featured_box1 from '../assets/featuredShoes1.json';
+import featured_box2 from '../assets/featuredShoes2.json';
+import nometer from '../assets/nometer.svg';
+import neutralPrice from '../assets/neutralPrice.svg';
+import goodPrice from '../assets/goodPrice.svg';
 
 export class Featured extends Component {
     state = {
@@ -131,6 +136,14 @@ export class Featured extends Component {
           document.getElementById("jewelleryBox").style.display = "block";
     }
 
+    priceChange() {
+        console.log("hello world");
+        if((featured_box1.averagePrice/featured_box1.retailPrice) >= 0.5) {
+            console.log("hello world");
+            document.getElementById("priceChange").style.backgroundImage = "../assets/goodPrice.svg";
+        }
+    }
+
     render() {
         return (
             <div id="totalFeatured">
@@ -166,78 +179,46 @@ export class Featured extends Component {
                     <div id="innerSneakerBox">
                         <p className="smallT">FEATURED SNEAKERS</p>
                         <div className="cardBox">
+                            {featured_box1.map(shoe => 
                             <div className="card">
-                                <div className="placeHolderImg"></div>
-                                <div className="placeHolderInfo">
-                                    <p className="tinyT">Yeezy</p>
+                                <div className="placeHolderImg">
+                                    <img src={shoe.thumbnailImgage} className="cardImg" alt="placeholders"></img>
                                 </div>
-                                <div className="placeHolderNo"></div>
-                            </div>
-                            <div className="card">
-                                <div className="placeHolderImg"></div>
                                 <div className="placeHolderInfo">
-                                    <p className="tinyT">Yeezy</p>
+                                    <p className="tinyT">{shoe.name}</p>
                                 </div>
-                                <div className="placeHolderNo"></div>
-                            </div>
-                            <div className="card">
-                                <div className="placeHolderImg"></div>
-                                <div className="placeHolderInfo">
-                                    <p className="tinyT">Yeezy</p>
+                                <div className="placeHolderNo">
+                                    <img src={nometer} className="noImg" alt="nometer gauge"></img>
+                                    <div className="noFeature">
+                                        <div className="singleFeaturePrice"></div>
+                                        <div className="singleFeaturePop"></div>
+                                        <div className="singleFeatureNeural"></div>
+                                    </div>
                                 </div>
-                                <div className="placeHolderNo"></div>
                             </div>
-                            <div className="card">
-                                <div className="placeHolderImg"></div>
-                                <div className="placeHolderInfo">
-                                    <p className="tinyT">Yeezy</p>
-                                </div>
-                                <div className="placeHolderNo"></div>
-                            </div>
-                            <div className="card">
-                                <div className="placeHolderImg"></div>
-                                <div className="placeHolderInfo">
-                                    <p className="tinyT">Yeezy</p>
-                                </div>
-                                <div className="placeHolderNo"></div>
-                            </div>
+                            )}
                         </div>
+
                         <div className="cardBox">
+
+                            {featured_box2.map(shoe => 
                             <div className="card">
-                                <div className="placeHolderImg"></div>
-                                <div className="placeHolderInfo">
-                                    <p className="tinyT">Yeezy</p>
+                                <div className="placeHolderImg">
+                                    <img src={shoe.thumbnailImgage} className="cardImg" alt="placeholders"></img>
                                 </div>
-                                <div className="placeHolderNo"></div>
-                            </div>
-                            <div className="card">
-                                <div className="placeHolderImg"></div>
                                 <div className="placeHolderInfo">
-                                    <p className="tinyT">Yeezy</p>
+                                    <p className="tinyT">{shoe.name}</p>
                                 </div>
-                                <div className="placeHolderNo"></div>
-                            </div>
-                            <div className="card">
-                                <div className="placeHolderImg"></div>
-                                <div className="placeHolderInfo">
-                                    <p className="tinyT">Yeezy</p>
+                                <div className="placeHolderNo">
+                                    <img src={nometer} className="noImg" alt="nometer gauge"></img>
+                                    <div className="noFeature">
+                                        <div className="singleFeaturePrice"></div>
+                                        <div className="singleFeaturePop"></div>
+                                        <div className="singleFeatureNeural"></div>
+                                    </div>
                                 </div>
-                                <div className="placeHolderNo"></div>
                             </div>
-                            <div className="card">
-                                <div className="placeHolderImg"></div>
-                                <div className="placeHolderInfo">
-                                    <p className="tinyT">Yeezy</p>
-                                </div>
-                                <div className="placeHolderNo"></div>
-                            </div>
-                            <div className="card">
-                                <div className="placeHolderImg"></div>
-                                <div className="placeHolderInfo">
-                                    <p className="tinyT">Yeezy</p>
-                                </div>
-                                <div className="placeHolderNo"></div>
-                            </div>
+                            )}
                         </div>
                     </div>
                 </div>
