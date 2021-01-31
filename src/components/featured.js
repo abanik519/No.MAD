@@ -4,8 +4,6 @@ import oasis from '../assets/oasis.png';
 import featured_box1 from '../assets/featuredShoes1.json';
 import featured_box2 from '../assets/featuredShoes2.json';
 import nometer from '../assets/nometer.svg';
-import neutralPrice from '../assets/neutralPrice.svg';
-import goodPrice from '../assets/goodPrice.svg';
 
 export class Featured extends Component {
     state = {
@@ -188,19 +186,14 @@ export class Featured extends Component {
                                     <p className="tinyT">{shoe.name}</p>
                                 </div>
                                 <div className="placeHolderNo">
-                                    <img src={nometer} className="noImg" alt="nometer gauge"></img>
-                                    <div className="noFeature">
-                                        <div className="singleFeaturePrice"></div>
-                                        <div className="singleFeaturePop"></div>
-                                        <div className="singleFeatureNeural"></div>
-                                    </div>
+                                    <p className="medT">Drip Factor</p>
+                                    <p className="hugeT">No.{shoe.drip}</p>
                                 </div>
                             </div>
                             )}
                         </div>
 
                         <div className="cardBox">
-
                             {featured_box2.map(shoe => 
                             <div className="card">
                                 <div className="placeHolderImg">
@@ -210,15 +203,11 @@ export class Featured extends Component {
                                     <p className="tinyT">{shoe.name}</p>
                                 </div>
                                 <div className="placeHolderNo">
-                                    <img src={nometer} className="noImg" alt="nometer gauge"></img>
-                                    <div className="noFeature">
-                                        <div className="singleFeaturePrice"></div>
-                                        <div className="singleFeaturePop"></div>
-                                        <div className="singleFeatureNeural"></div>
-                                    </div>
+                                    <p className="medT">Drip Factor</p>
+                                    <p className="hugeT">No.{shoe.drip}</p>
                                 </div>
                             </div>
-                            )} 
+                            )}
                         </div>
                     </div>
                 </div>
