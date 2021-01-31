@@ -142,7 +142,7 @@ export class Featured extends Component {
                     </div>
                     <div id="streetwear" className="navItem"
                     onClick={this.StreetwearActive}>
-                        <p className="navText">STREETWEAR</p>
+                        <p className="navText">APPAREL</p>
                         <div className="underline" id="onStreetwear"></div>
                     </div>
                     <div id="watches" className="navItem"
@@ -165,12 +165,79 @@ export class Featured extends Component {
                 <div id="sneakerBox" >
                     <div id="innerSneakerBox">
                         <p className="smallT">FEATURED SNEAKERS</p>
-                        <div className="card">
-                            <div className="placeHolderImg"></div>
-                            <div className="placeHolderInfo">
-                                <p className="tinyT">Yeezy</p>
+                        <div id="cardBox">
+                            <div className="card">
+                                <div className="placeHolderImg"></div>
+                                <div className="placeHolderInfo">
+                                    <p className="tinyT">Yeezy</p>
+                                </div>
+                                <div className="placeHolderNo"></div>
                             </div>
-                            <div className="placeHolderNo"></div>
+                            <div className="card">
+                                <div className="placeHolderImg"></div>
+                                <div className="placeHolderInfo">
+                                    <p className="tinyT">Yeezy</p>
+                                </div>
+                                <div className="placeHolderNo"></div>
+                            </div>
+                            <div className="card">
+                                <div className="placeHolderImg"></div>
+                                <div className="placeHolderInfo">
+                                    <p className="tinyT">Yeezy</p>
+                                </div>
+                                <div className="placeHolderNo"></div>
+                            </div>
+                            <div className="card">
+                                <div className="placeHolderImg"></div>
+                                <div className="placeHolderInfo">
+                                    <p className="tinyT">Yeezy</p>
+                                </div>
+                                <div className="placeHolderNo"></div>
+                            </div>
+                            <div className="card">
+                                <div className="placeHolderImg"></div>
+                                <div className="placeHolderInfo">
+                                    <p className="tinyT">Yeezy</p>
+                                </div>
+                                <div className="placeHolderNo"></div>
+                            </div>
+                        </div>
+                        <div id="cardBox">
+                            <div className="card">
+                                <div className="placeHolderImg"></div>
+                                <div className="placeHolderInfo">
+                                    <p className="tinyT">Yeezy</p>
+                                </div>
+                                <div className="placeHolderNo"></div>
+                            </div>
+                            <div className="card">
+                                <div className="placeHolderImg"></div>
+                                <div className="placeHolderInfo">
+                                    <p className="tinyT">Yeezy</p>
+                                </div>
+                                <div className="placeHolderNo"></div>
+                            </div>
+                            <div className="card">
+                                <div className="placeHolderImg"></div>
+                                <div className="placeHolderInfo">
+                                    <p className="tinyT">Yeezy</p>
+                                </div>
+                                <div className="placeHolderNo"></div>
+                            </div>
+                            <div className="card">
+                                <div className="placeHolderImg"></div>
+                                <div className="placeHolderInfo">
+                                    <p className="tinyT">Yeezy</p>
+                                </div>
+                                <div className="placeHolderNo"></div>
+                            </div>
+                            <div className="card">
+                                <div className="placeHolderImg"></div>
+                                <div className="placeHolderInfo">
+                                    <p className="tinyT">Yeezy</p>
+                                </div>
+                                <div className="placeHolderNo"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -178,7 +245,7 @@ export class Featured extends Component {
                     <p className="errorText">WE'RE SORRY...</p>
                     <img src={oasis} id="oasis" alt="coming soon oasis" />
                     <div>
-                        <p className="boxText smallT">Streetwear coming soon to</p>
+                        <p className="boxText smallT">Apparel coming soon to</p>
                         <p className="boxText bigT">No.MAD</p>
                     </div>
                 </div>
