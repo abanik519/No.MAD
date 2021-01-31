@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import searchImage from '../assets/magnifying.png';
-import Select, { components } from "react-select";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+//import searchImage from '../assets/magnifying.png';
+import Select from "react-select";
 import shoeList from '../assets/shoeNames.json';
 import SneakerPage from './sneakerPage';
 import { Route, IndexRoute, Router } from 'react-router';
@@ -92,7 +90,7 @@ export class SearchBar extends Component {
                 this.setState({place: ""});
                 count2 = 0;
                 count1++;
-                if(i == 2){
+                if(i === 2){
                     count1 = 0;
                     return;
                 }

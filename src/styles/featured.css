@@ -1,3 +1,70 @@
 #totalFeatured {
     height: 100vh;
 }
+
+#navList {
+    width: 90%;
+    margin-top: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid  #998000;
+}  
+
+.navItem {
+    margin: 5px;
+    flex-basis: 20%;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.5s ease-out;
+}
+.navItem:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.navText {
+    font-size: 30px;
+    color:#C5A500;
+    font-weight: bolder;
+}
+
+.underline {
+    transform:translateY(7px);
+    height: 7px;
+    background-color: #998000;
+    width: 100%;
+    display: none;
+    border-radius: 5px 5px 0px 0px;
+}
+
+#sneakerBox {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+}
+#streetwearBox {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: none;
+}
+#watchBox {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: none;
+}
+#handBox {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: none;
+}
+#jewelleryBox {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: none;
+}

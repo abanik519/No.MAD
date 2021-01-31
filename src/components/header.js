@@ -6,7 +6,6 @@ import dunes from '../assets/dunes2.png';
 import logo from '../assets/logo.png';
 import sun from '../assets/logoSun.png';
 
-const list = ["Nike", "Jordan", "Adidas", "Yeezy", "Nike Air"];
 export class Header extends Component {
     state = {
     };
