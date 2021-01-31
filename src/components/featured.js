@@ -163,7 +163,14 @@ export class Featured extends Component {
                 </div>
 
                 <div id="sneakerBox" >
-                    Sneakers
+                    <div id="innerSneakerBox">
+                        <p className="smallT">FEATURED SNEAKERS</p>
+                        <div className="featuredShoe">
+                            <div className="placeHolderImg"></div>
+                            <div className="placeHolderTxt"></div>
+                            <div className="placeHolderNo"></div>
+                        </div>
+                    </div>
                 </div>
                 <div id="streetwearBox">
                     <img src={oasis} id="oasis" alt="coming soon oasis" />
