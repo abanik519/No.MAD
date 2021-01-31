@@ -3,8 +3,12 @@ import React, { Component } from "react";
 import Select from "react-select";
 import shoeList from '../assets/shoeNames.json';
 import SneakerPage from './sneakerPage';
-import { Route, IndexRoute, Router } from 'react-router';
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 const brandList = ["Jordan 1 Retro...", "Yeezy Boost 350...", "Gucci..."]
 var str = "";
@@ -110,7 +114,7 @@ export class SearchBar extends Component {
 
     render(){
         if(this.state.selectedOption == null){
-            return (
+          return (
             <Select
             id="SearchBox"
             value={this.state.selectedOption}
@@ -126,11 +130,11 @@ export class SearchBar extends Component {
             );
         }
         else{
-            return(
-                <Router>
-                    <Route path="/page/" component={SneakerPage} />
-                </Router>
-            );
+          return(
+            <Router>
+                <Route path="/page/" component={SneakerPage} />
+            </Router>
+          );
         }
     }
 }
