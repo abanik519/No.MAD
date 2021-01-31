@@ -17,7 +17,8 @@ export class Header extends Component {
           document.getElementById("searchBox").style.transition= "all 1s ease-in-out";
           document.getElementById("totalHeader").style.backgroundColor = "rgba(240, 195, 47, 0.8)";
           document.getElementById("totalHeader").style.transition= "all 1s ease-in-out";
-          document.getElementById("headerDunes").style.bottom = "-350px"
+          document.getElementById("headerDunes").style.bottom = "-350px";
+          document.getElementById("totalFeatured").style.marginTop = "250px";
           document.getElementById("headerDunes").style.transition= "all 1s ease-in-out";
           document.getElementById("sun").style.transform = "scale(1.5)";
           document.getElementById("sun").style.marginTop = "77px";
@@ -27,6 +28,7 @@ export class Header extends Component {
           document.getElementById("headerDunes").style.bottom = "-150px"
           document.getElementById("sun").style.transform = "scale(1)";
           document.getElementById("sun").style.marginTop = "87px";
+          document.getElementById("totalFeatured").style.marginTop = "0px";
         }
       });
       

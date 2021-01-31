@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import '../App';
 //import searchImage from '../assets/magnifying.png';
 import Select from "react-select";
 import shoeList from '../assets/shoeNames.json';
@@ -117,8 +118,12 @@ export class SearchBar extends Component {
         console.log(selectedOption);
        }
 
-    scrollTo = () => {
-      var element_to_scroll_to = document.getElementById('innerSneakerBox');
+    scrollTo = selectedOption => {
+      document.getElementById("innerSneakerBox").style.display = "none";
+      document.getElementById("searchSneakerBox").style.display = "block";
+      var element_to_scroll_to = document.getElementById('searchSneakerBox');
+      this.setState({ selectedOption });
+      window.value = selectedOption.value;
       element_to_scroll_to.scrollIntoView();
     }
 

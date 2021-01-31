@@ -1,5 +1,7 @@
 #totalFeatured {
     background-color: white;
+    margin-top: 0px;
+    transition: all 1s ease-in-out;
 }
 
 #navList {
@@ -110,8 +112,21 @@
 
 #searchSneakerBox{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
+    display: none;
+}
+
+.searchImage{
+    width: 500px;
+}
+
+.searchTitle{
+    margin-left: 140px;
+    text-align: left;
+    font-weight: bolder;
+    color: #918C00;
+    font-size: 60px;
 }
 
 .cardBox{
@@ -130,7 +145,7 @@
 }
 
 .cardImg{
-    width: 200px;
+    width: 180px;
 }
 
 .placeHolderImg {

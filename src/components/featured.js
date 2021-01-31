@@ -14,6 +14,7 @@ export class Featured extends Component {
         isWatch: false,
         isHandbag: false,
         isJewellery: false,
+        searchShoe: {},
     };
 
 
@@ -137,6 +138,23 @@ export class Featured extends Component {
           document.getElementById("jewelleryBox").style.display = "block";
     }
 
+    componentDidMount(){
+        this.interval = setInterval(() => {
+            if(window.value != ""){
+                fetch('http://localhost:9000/custom?name=' + encodeURIComponent(window.value))
+                .then(response => response.json())
+                .then(data => this.setState({ searchShoe: data }));
+                console.log(this.state.searchShoe);
+                return;
+            }
+        }, 100);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
+        }
+    
+
     render() {
         return (
             <div id="totalFeatured">
@@ -186,7 +204,6 @@ export class Featured extends Component {
                         </div>
 
                         <div className="cardBox">
-
                             {featured_box2.map(shoe => 
                             <div className="card">
                                 <div className="placeHolderImg">
@@ -200,6 +217,11 @@ export class Featured extends Component {
                         </div>
                     </div>
                 </div>
+                <div id="searchSneakerBox">
+                    <div className="searchTitle">{this.state.searchShoe.name}</div>
+                    <img className="searchImage" src={this.state.searchShoe.thumbnailImgage}></img>            
+                </div>
+
                 <div id="streetwearBox">
                     <p className="errorText">WE'RE SORRY...</p>
                     <img src={oasis} id="oasis" alt="coming soon oasis" />

@@ -8,6 +8,8 @@ import './styles/sneakerPage.css';
 import Header from './components/header';
 import Featured from './components/featured';
 
+window.value = "";
+
 export class App extends Component {
   state = {
     totalInfo: [],
